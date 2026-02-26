@@ -19,5 +19,29 @@ If you are developing a production application, we recommend using TypeScript wi
 
 To run the react project on your device follow the instructions below
 
-Copy the following below and paste it into your terminal (vscode terminal) 
+First, endure that you have node.js install on your device
+
+Use the link and download the latest version: https://nodejs.org/en/download
+
+Recommdation: create a designated folder on your device to house your react projects
+
+Using your terminal navigate to the genral react folder and follow the instructions below.
+
+1. Copy the following below and paste it into your terminal (vscode terminal) 
+
+git clone https://github.com/KeyshawnWilliams/Main-Chatbot.git
+
+2. In your terminal run the following
+   npm install
+3. Then, excute the following in the terminal
+   npm run dev
+
+   click on the Local host, it should look something like this  https://nodejs.org/en/download.
+
+This will launch your browser and you may proceed to test thae chatbot.
+
+Note: the API key is hidden for safety reasons 
+
+
+
 
