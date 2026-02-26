@@ -9,7 +9,17 @@ export const HIGH_RISK_TERMS = [
   "i can't go on",
   "i don't want to live",
   "i wish i were dead",
-  "i want to end it all"
+  "i want to end it all",
+  "i feel hopeless",
+  "i feel worthless",
+  "i feel like a burden",
+  "i have no reason to live",
+  "i want to disappear",
+  "i feel anxious",
+  "i feel scared",
+  "i feel lonely",
+  "i feel abandoned",
+  "i feel heartbroken",
 ];
 
 /**
