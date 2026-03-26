@@ -85,7 +85,7 @@ body .container {
     justify-content: center;
     align-items: center;
 
-    background: linear-gradient(rgb(75, 192, 232), rgb(245, 245, 245))
+    background: linear-gradient(rgb(84, 200, 238), rgb(245, 245, 245))
 }
  /* the main container of the chatbot */
 .chat-popup {
@@ -99,7 +99,7 @@ body .container {
     overflow: hidden;
 }
 .chat-popup .chat-header {
-    background-color: #4bc0e8;
+    background-color: #1b77c7;
     color: #fff;
     padding: 15px 22px;
     display: flex;
@@ -117,7 +117,7 @@ body .container {
     width: 30px;
     height: 30px;
     flex-shrink: 0;
-    fill: #df2e2e;
+    fill: #2a41d9;
     background: #291515;
     border-radius: 50%;
 }
@@ -164,7 +164,7 @@ body .container {
     align-self: flex-end;
 }
 
-.chat-body .message .message-text {
+.chat-body  .message .message-text {
     max-width: 70%;
     padding: 10px 15px;
     background: #4bc0e8;
@@ -186,7 +186,18 @@ body .container {
     color: black;
     border-radius: 13px 13px 13px 13px;
     align-items: flex-end;
+    margin-left: 35px;
+    flex-direction: row-reverse; /* This is the magic line */
+    justify-content: flex-start;
 
+}
+.chat-body .user-message svg{
+    fill: #c71f49;
+    background: #fefefe;
+    border-radius: 50%;
+    margin-bottom: 2px;
+    height: 2rem;
+    width: 2rem;
 }
 
 /* chat footer*/
@@ -262,4 +273,94 @@ body .container {
 /* 2. Show the button ONLY when the input is valid */
 .chat-form .message-box:valid ~ .material-symbols-rounded {
     display: block;
+}
+
+/* Emergency Button */
+.emergency-call-btn {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 10px;
+  width: 130px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: 10px auto;
+}
+
+/* Breathing Tool Overlay */
+.breathing-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(10, 25, 47, 0.95); /* Deep dark blue for calm */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.breathing-circle {
+  width: 120px;
+  height: 120px;
+  background: rgba(0, 200, 255, 0.2);
+  border: 4px solid #00d4ff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+  /* This creates the 4-second "breath" animation */
+  transition: transform 5s ease-in-out, background 5s ease-in-out;
+}
+
+.breathing-circle.expand {
+  transform: scale(2.5);
+  background: rgba(0, 255, 180, 0.3);
+}
+
+.breathing-circle.shrink {
+  transform: scale(1);
+}
+
+.breathing-text {
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.breathing-subtext {
+  margin-top: 60px;
+  color: #ccd6f6;
+  font-style: italic;
+}
+
+/* Appointment Modal */
+.modal-backdrop {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.appointment-modal {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  color: #333;
+}
+
+.appointment-modal input, .appointment-modal select {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
 }
