@@ -1,6 +1,8 @@
 import emailjs from "@emailjs/browser";
 
 export const SendEmail = async (userMessage) => {
+    //for future configurations, 
+    //we can add more fields to the templateMessage object and reference them in the EmailJS template
     // 1. Pull values from the .env file
     const serviceID = import.meta.env.VITE_EMAIL_SERVICE_ID;
     const templateID = import.meta.env.VITE_EMAIL_TEMPLATE_ID;

@@ -15,7 +15,8 @@
     display: flex;
     flex-direction: column;
     padding: 20px;
-    background: linear-gradient(rgb(75, 192, 232), rgb(245, 245, 245));
+    /* background: linear-gradient(rgb(75, 192, 232), rgb(245, 245, 245)); */
+    background-color: #00d4ff;
     width: 100%;
     box-sizing: border-box;
 }
@@ -25,7 +26,6 @@
     height: 80px;
     background: #67b7e2;
     border-radius: 50%;
-    /* MAGIC LINE: This pulls ONLY the logo to the far left */
     align-self:center; 
 }
 
@@ -56,27 +56,6 @@
     transition: 0.3s ease;
 }
 
-
-/* 2. The Container: Centering the Chatbot Popup */
-.container {
-  flex-grow: 1;         /* Fills the rest of the screen height */
-  display: flex;
-  justify-content: center;
-  align-items: center;  /* This centers the chat-popup in the middle */
-  padding: 20px;
-}
-
-.chat-popup {
-  width: 420px;         /* Standard chatbot width */
-  height: 600px;        /* Standard height */
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;     /* Keeps the chat-header and footer rounded */
-}
-
 /* the main body of the chatbot */
 body .container {
     width: 100%;
@@ -85,19 +64,32 @@ body .container {
     justify-content: center;
     align-items: center;
 
-    background: linear-gradient(rgb(84, 200, 238), rgb(245, 245, 245))
+    background: linear-gradient(rgb(84, 200, 238), rgb(239, 239, 239));
 }
- /* the main container of the chatbot */
+/* 2. The Container: Centering the Chatbot Popup */
+.container {
+  flex-grow: 1;         /* Fills the rest of the screen height */
+  display: flex;
+  justify-content: center;
+  align-items: center;  /* This centers the chat-popup in the middle */
+  padding: 10px;
+}
+
+/* 3. The Chatbot Popup: A Stylish Container for Conversations */
 .chat-popup {
-    position: relative;
-    width: 420px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+  width: 600px;         /* Standard chatbot width */
+  height: 600px;        /* Standard height */
+  background: linear-gradient(white, gray );
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;     /* Keeps the chat-header and footer rounded */
+
+  position: relative;
+
 }
+
 .chat-popup .chat-header {
     background-color: #1b77c7;
     color: #fff;
@@ -135,8 +127,8 @@ body .container {
     padding: 25px 25px;
     display: flex;
     flex-direction: column;
-    gap:20px;
-    margin-bottom: 82px;
+    gap:10px;
+
     scroll-behavior: auto;
     scrollbar-width: thin;
     scrollbar-color: rgb(217, 209, 209) transparent;
@@ -165,7 +157,7 @@ body .container {
 }
 
 .chat-body  .message .message-text {
-    max-width: 70%;
+    max-width: 100%;
     padding: 10px 15px;
     background: #4bc0e8;
     word-wrap: break-word;
@@ -187,7 +179,7 @@ body .container {
     border-radius: 13px 13px 13px 13px;
     align-items: flex-end;
     margin-left: 35px;
-    flex-direction: row-reverse; /* This is the magic line */
+    flex-direction: row-reverse; 
     justify-content: flex-start;
 
 }
@@ -207,7 +199,7 @@ body .container {
     bottom: 0;
     width: 100%;
     background: #fff;
-    padding: 15px 22px 20px;
+    padding: 10px 10px 10px;
 }
 
 .chat-footer .chat-form{
@@ -226,12 +218,13 @@ body .container {
     background: none;
     outline: none;
     height: 50px;
-    padding: 0 17%;
+    padding: 0 10%;
     font-size: 0.90rem;
     max-height: 65px;
     overflow: auto;
     resize: none;
     line-height: 1.4;
+    flex: 1;
 
     /* these line of code are to hide the scrollbar of the textarea */
     scrollbar-width: none; /* Firefox */
@@ -255,12 +248,13 @@ body .container {
     border-radius: 50%;
     width: 35px;
     flex-shrink: 1.5rem;
-    margin-right: 6px;
+    margin-right: 1px;
+    margin-left: 0;
     transition: 0.9s ease;
 }
 
 .chat-footer button:hover{
-    background: #41494c;
+    background: #0ca8e1;
     color: #fff;
 
 }
@@ -277,8 +271,8 @@ body .container {
 
 /* Emergency Button */
 .emergency-call-btn {
-  background: #ff4d4d;
-  color: white;
+  background: #bab2b2;
+  color: rgb(16, 16, 16);
   border: none;
   padding: 8px 15px;
   border-radius: 20px;

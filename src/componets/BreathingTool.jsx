@@ -22,7 +22,8 @@ const BreathingTool = ({ onClose }) => {
       <div className={`breathing-circle ${isExpanding ? "expand" : "shrink"}`}>
         <span className="breathing-text">{phase}</span>
       </div>
-      <p className="breathing-subtext">Focus your eyes on the circle and follow the rhythm.</p>
+      <p className="breathing-instruction">{phase}</p>
+      <p className="breathing-subtext"><strong>Focus your eyes on the circle and follow the rhythm</strong></p>
       <button className="close-breathing-btn" onClick={onClose}>
         I feel calmer now
       </button>
