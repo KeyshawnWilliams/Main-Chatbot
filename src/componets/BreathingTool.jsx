@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 //import "./index.css";
 
 const BreathingTool = ({ onClose }) => {
-  const [phase, setPhase] = useState("Inhale...");
+  const [phase, setPhase] = useState("Breathe slowly...");
   const [isExpanding, setIsExpanding] = useState(true);
 
   useEffect(() => {

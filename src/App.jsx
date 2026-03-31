@@ -73,10 +73,11 @@ const App = () => {
     try {
       
 
-      const response = await fetch(
-        `${import.meta.env.VITE_API_URL}?key=${import.meta.env.VITE_GEMINI_API_KEY}`,
-        requestOptions
-      );
+      const response = await fetch("/api/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ contents: finalContents }),
+      });
 
       const data = await response.json();
       console.log("FULL RESPONSE:", data);
