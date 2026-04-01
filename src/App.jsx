@@ -57,7 +57,7 @@ const App = () => {
 
     try {
       // Calling your node server (Terminal 1)
-      const response = await fetch("http://localhost:5000/API/chat", { 
+      const response = await fetch("http://https://main-chatbot-uk5i.onrender.com/API/chat", { 
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ contents: finalContents }),
