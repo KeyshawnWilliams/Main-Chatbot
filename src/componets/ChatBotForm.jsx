@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import React, { useRef } from "react";
 
 const ChatBotForm = ({ chatHistory, setChatHistory, generateChatBotResponse }) => {
   const inputRef = useRef();
@@ -9,44 +9,40 @@ const ChatBotForm = ({ chatHistory, setChatHistory, generateChatBotResponse }) =
     if (!userInput) return;
 
     inputRef.current.value = "";
-    // Reset the height of the box back to its original size after sending
     inputRef.current.style.height = "auto";
 
-    setChatHistory((prevChatHistory) => [...prevChatHistory, { role: "user", text: userInput }]);
+    // Create the updated history snapshot
+    const updatedHistory = [...chatHistory, { role: "user", text: userInput }];
+    setChatHistory(updatedHistory);
 
     setTimeout(() => {
-      setChatHistory((prevChatHistory) => [
-        ...prevChatHistory,
-        { role: "model", text: "thinking...." }
-      ]);
-      generateChatBotResponse([...chatHistory, { role: "user", text: userInput }]);
+      setChatHistory((prev) => [...prev, { role: "model", text: "thinking...." }]);
+      // Pass the snapshot so the API gets the latest message
+      generateChatBotResponse(updatedHistory);
     }, 600);
   };
 
   return (
-    <form action="#" className="chat-form" onSubmit={handleFormSubmit}>
-      {/* 1. Changed <input> to <textarea> for wrapping */}
+    <form className="chat-form" onSubmit={handleFormSubmit}>
       <textarea
         ref={inputRef}
         className="message-box"
         placeholder="Type message here.."
         required
         onInput={(e) => {
-          // 2. This logic makes the box expand vertically instead of scrolling horizontally
           e.target.style.height = "auto";
           e.target.style.height = `${e.target.scrollHeight}px`;
         }}
         onKeyDown={(e) => {
-          // 3. Allows 'Enter' to send, but 'Shift + Enter' to start a new line
           if (e.key === "Enter" && !e.shiftKey) {
             e.preventDefault();
             handleFormSubmit(e);
           }
         }}
       />
-      <button className="material-symbols-rounded">arrow_upward</button>
+      <button type="submit" className="material-symbols-rounded">arrow_upward</button>
     </form>
   );
-}
+};
 
 export default ChatBotForm;

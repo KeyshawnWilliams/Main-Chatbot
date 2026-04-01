@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://your-username.github.io/newchatbot", 
+  "homepage": "https://your-username.github.io/newchatbot",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -14,6 +14,11 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "@google/genai": "^1.47.0",
+    "@google/generative-ai": "^0.24.1",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
