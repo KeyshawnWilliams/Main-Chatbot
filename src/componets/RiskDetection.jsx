@@ -1,5 +1,8 @@
 // src/componets/RiskDetector.js
-
+// Main-Chatbot/src/componets/RiskDetection.jsx
+// This module defines a function to detect potential risks in the user's input message. 
+// It categorizes the input into three risk levels: CRISIS, PANIC, and STRESS_TRIGGER, based on the presence of specific keywords or phrases. 
+// The function returns the detected risk category or null if no risks are identified, allowing the chatbot to respond appropriately based on the user's emotional state.
 export const RISK_CATEGORIES = {
   CRISIS: [
     "kill myself", "end my life", "suicide", "hurt myself", "want to die", 

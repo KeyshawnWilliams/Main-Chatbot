@@ -1,3 +1,8 @@
+// Main-Chatbot/src/componets/EmergencyEmail.jsx
+// This module defines a function to send an emergency email using the EmailJS service. 
+// It retrieves necessary configuration values from environment variables, constructs the email content based on the user's message, and handles the API call to send the email. 
+// The function includes error handling to log any issues that arise during the email sending process.
+
 import emailjs from "@emailjs/browser";
 
 export const SendEmail = async (userMessage) => {

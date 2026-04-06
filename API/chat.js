@@ -1,3 +1,8 @@
+// Main-Chatbot/API/chat.js
+// This file sets up an Express server to handle chat requests from the frontend 
+// and communicate with Gemini 3 via Proxy.
+
+
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';

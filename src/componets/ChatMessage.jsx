@@ -1,3 +1,8 @@
+// Main-Chatbot/src/componets/ChatMessage.jsx
+// This component is responsible for rendering individual chat messages in the conversation. It takes a chat object as a prop, which contains the message text, the role (user or model), and an optional error flag. 
+// Based on the role, it displays either the chatbot icon or the user icon next to the message bubble. 
+// The message bubble's styling can also change if there is an error, allowing for visual feedback in case of issues with generating a response.
+
 import ChatBotIcon from "./chatbotIcon";
 import UserIcon from "./UserIcon";
 const ChatMessage = ({ chat }) => {

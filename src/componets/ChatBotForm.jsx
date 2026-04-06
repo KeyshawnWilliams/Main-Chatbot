@@ -1,3 +1,9 @@
+// Main-Chatbot/src/componets/ChatBotForm.jsx
+// This component renders the input form for the chatbot, allowing users to type their messages. 
+// It handles form submission, updates the chat history with the user's message, and triggers 
+// the generation of the chatbot's response. The textarea automatically resizes based on content, 
+// and pressing "Enter" submits the form while "Shift + Enter" allows for new lines.
+
 import React, { useRef } from "react";
 
 const ChatBotForm = ({ chatHistory, setChatHistory, generateChatBotResponse }) => {

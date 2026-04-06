@@ -1,3 +1,7 @@
+// Main-Chatbot/src/componets/UserIcon.jsx
+// This component renders a simple user icon using SVG. It can be used as a visual element in the UI, 
+// such as next to user messages in the chat interface to differentiate them from chatbot responses.
+
 const UserIcon = () => {
   return (
     <svg

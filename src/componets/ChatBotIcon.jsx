@@ -1,4 +1,6 @@
-
+// Main-Chatbot/src/componets/ChatBotIcon.jsx
+// This component renders a simple chatbot icon using SVG. It can be used as a visual element in the UI, 
+// such as in the header or as a button to open the chat interface.
 const ChatBotIcon = () => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 1024 1024">
