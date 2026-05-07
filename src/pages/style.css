@@ -1,0 +1,114 @@
+/* --- Appointment Page Styles --- */
+
+.appointment-page-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #19a0e862;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: inherit;
+  color: #333;
+}
+
+.appointment-page-container h2 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.appointment-page-container p {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+}
+
+.appointment-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.appointment-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.appointment-form-group label,
+.appointment-form-grid label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #495057;
+}
+
+.appointment-page-container input,
+.appointment-page-container select,
+.appointment-page-container textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.appointment-page-container input:focus,
+.appointment-page-container select:focus,
+.appointment-page-container textarea {
+  outline: none;
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.appointment-page-container textarea {
+  resize: vertical;
+}
+
+.appointment-btn-group {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 25px;
+}
+
+.appointment-submit-btn {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.appointment-submit-btn:hover {
+  background-color: #218838;
+}
+
+.appointment-cancel-btn {
+  padding: 10px 20px;
+  background-color: #6c757d;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.appointment-cancel-btn:hover {
+  background-color: #5a6268;
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 600px) {
+  .appointment-form-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
