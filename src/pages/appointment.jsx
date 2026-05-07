@@ -81,6 +81,15 @@ const AppointmentPage = ({ onBack }) => {
     }
   };
 
+  // Define the back navigation handler
+  const handleBack = () => {
+    if (onBack) {
+      onBack();
+    } else {
+      window.history.back(); // Fallback to browser history
+    }
+  };
+
   return (
     <div className="appointment-page-container">
       <h2>Book a Counselling Session</h2>
@@ -217,7 +226,7 @@ const AppointmentPage = ({ onBack }) => {
           >
             Submit
           </button>
-          <button type="button" onClick={onBackNavigation} className="appointment-cancel-btn">
+          <button type="button" onClick={handleBack} className="appointment-cancel-btn">
             Cancel
           </button>
         </div>
