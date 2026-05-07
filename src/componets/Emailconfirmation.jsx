@@ -1,6 +1,6 @@
 
 
-export const Emailcornfirmation = async (details) => {
+export const SendAppointmentEmail = async (details) => {
     const serviceID = import.meta.env.VITE_EMAIL_SERVICE_ID;
     const templateID = import.meta.env.VITE_APPEMAIL_TEMPLATE_ID; // Use your new template ID
     const publicKey = import.meta.env.VITE_EMAIL_PUBLIC_KEY;
