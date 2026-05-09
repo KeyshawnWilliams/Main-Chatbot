@@ -34,6 +34,9 @@ const Home = ({
               or used outside of the scope of this specific study in which you are
               participating.
           </p>
+          <br />
+          <div>Once you are finish please feel frees to use the link below to navigate to the second form. <br/>
+          <p>Link: <a href="https://docs.google.com/forms/d/e/1FAIpQLSdEBYKEf8h5EeiTB1os__UYTz4p0ZGnc-GU6LHEpuy7vKcu_A/viewform?usp=publish-editor"> FORM 2</a></p></div>
           <button
               className="emergency-call-btn"
               onClick={() => window.open("tel:8886395433")}
@@ -106,7 +109,7 @@ const Home = ({
                                   <ChatBotIcon />
                                   <p className="message-text">
                                       Hi😊! I am your mental health support ChatBot, I am here to
-                                      help.
+                                      help. You can talk to me about anything that's on your mind, whether it's stress, anxiety, or just how your day is going. I'm here to listen and provide support in any way I can. Feel free to share your thoughts and feelings with me, and I'll do my best to assist you.
                                   </p>
                               </div>
                               {chatHistory.map((chat, index) => (

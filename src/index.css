@@ -39,11 +39,12 @@ body {
 }
 
 .main-header img {
-  width: 90px;
-  height: 90px;
+  width: 150px;
+  height: 150px;
   background: #67b7e2;
   border-radius: 50%;
   align-self: center;
+  box-shadow: 5px 5px 10px 10px rgba(244, 244, 244, 0.401);
 }
 
 .main-header .main-header-text {
@@ -54,6 +55,8 @@ body {
   align-items: center;
   font-family: Georgia, "Times New Roman", Times, serif;
   text-shadow: 0px 2px 4px rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  text-decoration: underline  #dee0e2;
 }
 
 .main-header .navbar {
@@ -68,9 +71,20 @@ body {
 .main-header .navbar li {
   align-self: center;
   color: #000000;
-  font-size: 0.98rem;
+  font-size: 1.5rem;
   cursor: pointer;
-  transition: 0.3s ease;
+  font-weight: 200;
+}
+
+/*
+  adding a hover effect to the navbar items to make them more interactive and visually appealing. The hover state will change the text color, add an underline, and slightly adjust letter spacing for a subtle animation effect.
+
+*/
+.main-header .navbar li:hover {
+  color: #1b77c7;
+  font-weight: bold;
+  text-decoration: underline;
+  letter-spacing: -0.2px; 
 }
 
 /* ==========================================================================
@@ -234,7 +248,7 @@ body {
 }
 
 .chat-popup .chat-header {
-  background-color: #1b77c7;
+  background-color: #51a8f4;
   color: #fff;
   padding: 15px 22px;
   display: flex;
@@ -246,6 +260,9 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-left: 170px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .header-info svg {
@@ -253,14 +270,16 @@ body {
   height: 30px;
   flex-shrink: 0;
   fill: #2a41d9;
-  background: #291515;
+  background: #e8e6e6;
   border-radius: 50%;
+  
 }
 
 .header-info .Logo-text {
   color: rgb(0, 0, 0);
   font-size: 18px;
   font-weight: 600;
+
 }
 
 .chat-body {
