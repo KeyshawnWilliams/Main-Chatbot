@@ -153,7 +153,13 @@ const App = () => {
 
   return (
     <>
+
       <div className="main-header">
+
+        <div className="main-header-text">
+          <h1>Mental Health Chatbot</h1>
+        </div>
+        <br />
         <ChatBotLogo />
         <ul className="navbar">
           <li onClick={() => setView("home")}>Home</li>
