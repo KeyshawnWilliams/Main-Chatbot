@@ -13,7 +13,7 @@ import "./index.css";
 import "./pages/style.css";
 
 const App = () => {
-  // 1. STATE DECLARATIONS (Only one of each!)
+  // 1. STATE DECLARATIONS 
   const [view, setView] = useState("home");
   const [chatHistory, setChatHistory] = useState([]);
   const [activeChatId, setActiveChatId] = useState(null);
