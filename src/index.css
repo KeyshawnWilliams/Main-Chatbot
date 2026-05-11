@@ -581,6 +581,17 @@ body {
   font-size: 0.85rem;
   opacity: 0.8;
 }
+
+.resource-card {
+  cursor: pointer; /* Changes the mouse to a hand */
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resource-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.4); /* Makes it look "lit up" on hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
 /* ==========================================================================
    7. DISCLAIMER & EMERGENCY CALL BUTTON
    ========================================================================== */
