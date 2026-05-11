@@ -148,10 +148,25 @@ const App = () => {
 
     // 😰 Panic
     if (riskType === "PANIC") {
-      setActiveExercise("breathing");
+      
       updateHistory(
         "It sounds like you're overwhelmed. I've opened a breathing exercise for you."
       );
+      setTimeout(() => {
+
+      setActiveExercise("breathing");
+      }, 5000); // Delay the breathing exercise by 1 seconds
+      return;
+    }
+    // 😟 Stress
+    if (riskType === "STRESS_TRIGGER") {
+      
+      updateHistory(
+        "I sense you're going through a tough time. Let's try a grounding exercise together."
+      );
+      setTimeout(() => {
+      setActiveExercise("grounding");
+      }, 5000); // Delay the grounding exercise by 1 seconds
       return;
     }
 
