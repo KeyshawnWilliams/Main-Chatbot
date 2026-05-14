@@ -14,6 +14,7 @@ import ReflectionTool from "./componets/ReflectionQuestions";
 import Home from "./pages/Home";
 import AppointmentPage from "./pages/appointment";
 import About from "./pages/About";
+import Resource from "./pages/Resource";
 import "./index.css";
 import "./pages/style.css";
 
@@ -136,7 +137,7 @@ const App = () => {
 
     const riskType = detectRisk(userLatestInput);
 
-    // 🚨 Crisis
+    // Crisis
     if (riskType === "CRISIS") {
       await SendEmail(userLatestInput);
       updateHistory(
@@ -146,7 +147,7 @@ const App = () => {
       return;
     }
 
-    // 😰 Panic
+    // Panic
     if (riskType === "PANIC") {
       
       updateHistory(
@@ -158,7 +159,7 @@ const App = () => {
       }, 5000); // Delay the breathing exercise by 1 seconds
       return;
     }
-    // 😟 Stress
+    // Stress
     if (riskType === "STRESS_TRIGGER") {
       
       updateHistory(
@@ -246,6 +247,7 @@ const App = () => {
           <li onClick={() => setView("appointment")}>
             Set Appointments
           </li>
+          <li onClick={() => setView("resources")}>Resources</li>
           <li onClick={() => setView("about")}>About Us</li>
         </ul>
       </div>
@@ -289,7 +291,13 @@ const App = () => {
         <AppointmentPage onBack={() => setView("home")} />
       )}
 
+      {view === "resources" && <Resource />}
       {view === "about" && <About />}
+
+      {/* Page footer for copy rights */}
+      <footer className="page-footer">
+        <p>&copy; 2026 Mental Health Chatbot. All rights reserved.</p>
+      </footer>
     </>
   );
 };

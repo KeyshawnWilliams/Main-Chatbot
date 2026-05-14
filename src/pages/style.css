@@ -112,3 +112,88 @@
     gap: 15px;
   }
 }
+/*========================================================= 
+Resources
+
+==========================================================*/
+
+/* Container styling */
+.resource-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #075fc386;
+    border-radius: 10px;
+}
+
+.resource-title {
+    color: #020202;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.resource-description {
+    color: #000000;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Flexbox layout for the cards */
+.resource-cards {
+    display: flex;
+    flex-direction: column;
+}
+
+.resource-card {
+    display: flex;
+    align-items: center; /* Centers image vertically with text */
+    justify-content: space-between;
+    padding: 25px 0;
+    border-bottom: 1px solid #e0e0e0; /* The separator line */
+    gap: 20px;
+}
+
+/* Remove the line from the very last item */
+.resource-card:last-child {
+    border-bottom: none;
+}
+
+/* Text section within the card */
+.card-title {
+    margin-top: 0;
+    color: #000000;
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.card-description {
+    color: #000000;
+    line-height: 1.5;
+    margin-bottom: 0;
+    flex: 1; /* Allows text to take up remaining space */
+}
+
+/* Image styling */
+.card-image {
+    width: 120px; /* Adjust size as needed */
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .resource-card {
+        flex-direction: column-reverse; /* Puts image on top for small screens */
+        align-items: flex-start;
+    }
+
+    .card-image {
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+    }
+}

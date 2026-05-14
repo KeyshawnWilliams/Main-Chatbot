@@ -757,3 +757,15 @@ body {
     padding: 0 5%;
   }
 }
+
+/* =====================================
+PAGE FOOTER & RESOURCES RESPONSIVE ADJUSTMENT
+========================================*/
+
+.page-footer {
+  background: transparent;
+  padding: 20px;
+  text-align: center;
+  color: #333;
+  font-size: 0.9rem;
+}
