@@ -240,6 +240,7 @@ const App = () => {
 
         <ChatBotLogo />
 
+        {/* THIS SECTION NAVIGATE TO THE DIFFERENT PAGES USING SET VIEW */}
         <ul className="navbar">
           <li onClick={() => setView("home")}>Home</li>
           <li onClick={() => setView("appointment")}>

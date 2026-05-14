@@ -5,7 +5,7 @@ import meditationMusic from "../Assets/5 Minute Meditation Music - with Earth Re
 const MeditationTool = ({ onClose }) => {
   return (
     <div className="breathing-overlay">
-      <div className="breathing-circle shrink"> {/* Reusing your circle style */}
+      <div className="breathing-circle shrink"> 
         <span className="material-symbols-rounded" style={{ fontSize: '3rem' }}>graphic_eq</span>
       </div>
       <h2 className="breathing-instruction">5-Minute Calm</h2>
