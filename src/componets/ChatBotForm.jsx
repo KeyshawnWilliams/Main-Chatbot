@@ -10,22 +10,45 @@ const ChatBotForm = ({ chatHistory, setChatHistory, generateChatBotResponse }) =
   const inputRef = useRef();
 
   const handleFormSubmit = (e) => {
-    e.preventDefault();
+    if (e) e.preventDefault(); // e might be null if called from startListening
     const userInput = inputRef.current.value.trim();
     if (!userInput) return;
 
     inputRef.current.value = "";
     inputRef.current.style.height = "auto";
 
-    // Create the updated history snapshot
     const updatedHistory = [...chatHistory, { role: "user", text: userInput }];
     setChatHistory(updatedHistory);
 
     setTimeout(() => {
       setChatHistory((prev) => [...prev, { role: "model", text: "thinking...." }]);
-      // Pass the snapshot so the API gets the latest message
       generateChatBotResponse(updatedHistory);
     }, 600);
+  };
+
+  const startListening = () => {
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    
+    if (!SpeechRecognition) {
+      alert("Browser not supported");
+      return;
+    }
+
+    const recognition = new SpeechRecognition();
+    recognition.lang = 'en-US';
+
+    recognition.onresult = (event) => {
+      const transcript = event.results[0][0].transcript;
+      inputRef.current.value = transcript;
+      
+      // Manually trigger height adjustment for textarea
+      inputRef.current.style.height = `${inputRef.current.scrollHeight}px`;
+      
+      // Automatically submit after speaking
+      handleFormSubmit();
+    };
+
+    recognition.start();
   };
 
   return (
@@ -46,7 +69,20 @@ const ChatBotForm = ({ chatHistory, setChatHistory, generateChatBotResponse }) =
           }
         }}
       />
-      <button type="submit" className="material-symbols-rounded">arrow_upward</button>
+      
+      {/* The Mic Button (visible when empty) */}
+      <button 
+        type="button" 
+        className="material-symbols-rounded mic-btn" 
+        onClick={startListening}
+      >
+        mic
+      </button>
+
+      {/* The Send Button (visible when typing) */}
+      <button type="submit" className="material-symbols-rounded send-btn">
+        arrow_upward
+      </button>
     </form>
   );
 };
