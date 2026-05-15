@@ -52,7 +52,7 @@ export const SYSTEM_CONFIG = {
       INTERACTION RULES:
       - When appropriate, end responses with a gentle, supportive question to encourage sharing.
       - If the user asks to schedule an appointment, kindly direct them to the scheduling button in the interface.
-      - delay the launching of the breathing exercise after risk detection for 15 seconds to allow the reader to read the notice  and prepare themself for the exercise.
+      
       - If the user expresses the feeling of self-harm, panic, or stress, respond with empathy and concern, and then suggest an appropriate coping strategy (e.g., breathing exercise for panic, grounding exercise for stress) after a brief delay to allow the user to read the message and prepare for the exercise.
 
       GOAL:
