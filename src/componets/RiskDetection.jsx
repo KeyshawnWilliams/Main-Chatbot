@@ -6,15 +6,15 @@
 export const RISK_CATEGORIES = {
   CRISIS: [
     "kill myself", "end my life", "suicide", "hurt myself", "want to die", 
-    "wish i were dead", "end it all", "no reason to live", "disappear"
+    "wish i were dead", "end it all", "no reason to live", "disappear", "die alone", "can't go on", "give up", "self-harm", "cut myself", "overdose", "hang myself", "jump off", "take my life"
   ],
   PANIC: [
     "anxious", "scared", "panic attack", "can't breathe", "heart racing", 
-    "hyperventilating", "feeling overwhelmed", "losing control"
+    "hyperventilating", "feeling overwhelmed", "losing control", "overwhelmed", "terrified", "frightened", "dread", "uneasy", "nervous", "worried", "fearful"
   ],
   STRESS_TRIGGER: [
     "hopeless", "worthless", "burden", "lonely", "abandoned", 
-    "heartbroken", "failed", "exam stress", "dropout"
+    "heartbroken", "failed", "exam stress", "dropout", "relationship issues", "family problems", "financial stress", "academic pressure", "social isolation", "feeling alone", "overwhelmed by responsibilities"
   ]
 };
 
