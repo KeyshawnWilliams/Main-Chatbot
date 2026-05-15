@@ -144,7 +144,7 @@ const App = () => {
         "I'm very concerned about you. Please call 888-NEW-LIFE or visit UTech Counselling Unit.",
         true
       );
-      return;
+      
     }
 
     // Panic
@@ -157,7 +157,7 @@ const App = () => {
 
       setActiveExercise("breathing");
       }, 5000); // Delay the breathing exercise by 1 seconds
-      return;
+      
     }
     // Stress
     if (riskType === "STRESS_TRIGGER") {
@@ -168,7 +168,7 @@ const App = () => {
       setTimeout(() => {
       setActiveExercise("grounding");
       }, 5000); // Delay the grounding exercise by 1 seconds
-      return;
+      
     }
 
     const finalContents = [
