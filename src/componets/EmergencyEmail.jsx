@@ -24,6 +24,8 @@ export const SendEmail = async (userMessage) => {
         Student_Message: userMessage,
         alert_time: new Date().toLocaleString(),
         subject: "Urgent: Student in Distress",
+        Phone_Number: "876-256-8976", // Placeholder - ideally this would be dynamic or configured
+        student_Alias: "Soft Cat" // Placeholder - ideally this would be dynamic or configured
     };
 
     try {
