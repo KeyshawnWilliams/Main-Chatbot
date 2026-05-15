@@ -25,7 +25,8 @@ const ChatBotForm = ({ chatHistory, setChatHistory, generateChatBotResponse }) =
       generateChatBotResponse(updatedHistory);
     }, 600);
   };
-
+  
+// add voice input functionality
   const startListening = () => {
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     
